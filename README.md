@@ -165,7 +165,9 @@ Ans - Yes, we can use the extension in any user applications. But give it a thou
 
 -----
 
-### Preprocessor is most-ly find & replace right, so what if I define a macro whose name is a C keyword?
+Preprocessor is most-ly find & replace right, so what if I define a macro whose name is a C keyword?
+
+Ans - Yes. It can be useful in testing something or someone's code. Let's say you asked people to write a `sizeof` simulation code. You don't need to look at code just compile it by defining `sizeof` as nothing (gcc provides an option -D) and there-by you may expect an error if they have used sizeof; as sizeof would get replaced with nothing and if the code says `sizeof(datatype)`, it would be `datatype`.
 
 -----
 
@@ -285,8 +287,12 @@ Ans - One feature is aliasing - you can give more than one name to a memory loca
 
 -----
 
-Why can't we use #define instead of typedef? First of all what's the difference between them?
+Why can't we use `#define` instead of `typedef`? First of all what's the difference between them?
 
 https://stackoverflow.com/questions/1666353/are-typedef-and-define-the-same-in-c
 
 -----
+
+Is it possible to compare two macros or compile-time switches or symbolic constants which has no assigned value to them?
+
+Ans - Yes, it is possible.
