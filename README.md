@@ -312,6 +312,26 @@ Ans - Yes, it is possible.
 
 -----
 
+C compiler throws error when break is placed inside an `if` block. Is there any other alternative?
+
+Ans - Yes, there's an alternate way to use break in an `if` block. Just place the corresponding `if` block inside `do-while(0)` block. This may come in handy, when there are multiple deferring `if` blocks which let the control jump to a certail location without the usage of `goto` statements.
+```C
+do {
+    if (n > 100) {
+        break;
+    }
+    else if (n > 10) {
+        puts("Input is greater than 10");
+    }
+    else if (n < 10) {
+        puts("Input is lesser than 10");
+    }
+} while (0);
+puts("Outside block");
+```
+
+-----
+
 List of format specifiers in C:
 
 Format Specifier | Data Type
